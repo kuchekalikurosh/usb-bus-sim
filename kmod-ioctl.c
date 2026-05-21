@@ -25,8 +25,6 @@
 #include <linux/vmalloc.h>
 #include "../ioctl-defines.h"
 
-// based on provided skeleton code + annotated code
-
 static dev_t dev = 0;
 static struct class* kmod_class;
 static struct cdev kmod_cdev;
@@ -181,7 +179,6 @@ static long kmod_ioctl(struct file *f, unsigned int cmd, unsigned long arg) {
 	return 0;
 }
 
-// the rest was either taken from the skeleton or annotated skeleton
 static int kmod_open(struct inode *inode, struct file *file) {
 	printk(KERN_INFO "kmod: open\n");
 	return 0;
